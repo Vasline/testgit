@@ -39,7 +39,7 @@ void run(int a[], int PageNum, int BlockSno)
 			
 		}
 		if (mnm >0) {
-			//cout << "ÒÑ´æÔÚ£¡" << endl;
+			//cout << "å·²å­˜åœ¨ï¼" << endl;
 			for (int m = 0; m < BlockSno; m++) {
 				cout << p[m] << "  ";
 			}
@@ -57,45 +57,8 @@ void run(int a[], int PageNum, int BlockSno)
 		mnm = 0;
 		cout << endl;
 	}
-	cout <<"ÃüÖÐµÄ¸öÊý£º"<< mm << endl;
-	cout << "È±Ò³ÂÊÎª£º%" << (PageNum - mm) / (PageNum / 1.00) * 100 << endl;
-	//cout << "È±Ò³ÂÊÎª:%" << (PageNum - mm) / PageNum * 100 << endl;
-		/*			if (cour > 0) {
-						j = BlockSno;
-					}
-					else if(cour==0) {
-		p[i%BlockSno] = a[i];
-				cout << p[j] << "  ";
-					}
-					
-			
-				}
-				
-	cout << endl;
-	}
-	cout << "È±Ò³ÂÊÎª";
-	cout << "%" << (count / PageNum) *100<< endl;*/
-
-
-	//for (int i = 0; i<BlockSno; i++)
-	//{
-	//	for (int j = 0; j <= i; j++)
-	//	{
-	//		p[j] = a[j];
-	//		cout << p[j] << "  ";
-	//	}
-	//	cout << endl;
-
-	//}
-	//for (int i = 3; i<PageNum; i++)
-	//{
-	//	for (int j = 0; j<BlockSno; j++)
-	//	{
-	//		p[i%BlockSno] = a[i];
-	//		cout << p[j] << "  ";
-	//	}
-	//	cout << endl;
-	//}
+	cout <<"å‘½ä¸­çš„ä¸ªæ•°ï¼š"<< mm << endl;
+	cout << "ç¼ºé¡µçŽ‡ä¸ºï¼š%" << (PageNum - mm) / (PageNum / 1.00) * 100 << endl;
 }
 bool check(int a[], int b,int BlockSno)
 {
@@ -118,18 +81,18 @@ int main()
 	int PageSno;
 	int *Page;
 	int PageNum;
-	cout << "ÇëÊäÈëÄãµÄ×÷ÒµºÅÊýÄ¿£º";
+	cout << "è¯·è¾“å…¥ä½ çš„ä½œä¸šå·æ•°ç›®ï¼š";
 	cin >> PageNum;
 	cout << endl;
 	Page = new int[PageNum];
-	cout << "ÇëÊäÈë¸÷¸ö×÷Òµ£º" << endl;
+	cout << "è¯·è¾“å…¥å„ä¸ªä½œä¸šï¼š" << endl;
 	for (int i = 0; i<PageNum; i++)
 	{
 		cin >> PageSno;
 		Page[i] = PageSno;
 	}
 	display(Page, PageNum);
-	cout << "ÇëÊäÈëÄãËùÐèÒªµÄ¿éºÅÊýÄ¿£º";
+	cout << "è¯·è¾“å…¥ä½ æ‰€éœ€è¦çš„å—å·æ•°ç›®ï¼š";
 	cin >> BlockSno;
 	run(Page, PageNum, BlockSno);
 	return 0;
